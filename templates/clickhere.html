@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOUSE PRICE PREDICTION</title>
+<style>
+    body {
+        background-image: url('static/HOUSE 5.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; /* This ensures the image covers the entire background */
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    h1 {
+        text-align: TOP; /* TOP the title horizontally */
+        font-size: 50px;
+        color: rgb(16, 15, 15);
+        margin-top: 0; /* Set margin-top to 0 to position title at the top */
+    }
+    
+    form{
+        background-color: rgba(red, green, blue, alpha);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline;
+        margin-right: 20px; 
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white; 
+        font-weight: bold;
+        
+    }
+
+    nav a:hover {
+        color: white;
+        
+    }
+</style>
+</head>
+<body>
+<h1 style="text-align:Top;font-size:50px;color:rgb(17, 17, 17);"><i>HOUSE PRICE PREDICTION</i></h1>
+
+<form action="/" method="post">
+    <label for="area">Enter a lot area:</label>
+    <input type="number" id="area" name="area" required>
+    <br><br>
+    <label for="no_of_bedrooms">Number of bedrooms:</label>
+    <select name="no_of_bedrooms" id="no_of_bedrooms">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br><br>
+    <label for="no_of_bathrooms">Number of bathrooms:</label>
+    <select name="no_of_bathrooms" id="no_of_bathrooms">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br><br>
+    <button type="submit">Submit</button>
+    <p>PRICE: {{ prediction }}</p>
+</form>
+
+</body>
+</html>
